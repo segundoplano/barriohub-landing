@@ -1,0 +1,35 @@
+---
+const currentPath = Astro.url.pathname;
+import '../styles/navbarStyle.css';
+---
+
+<nav class="nav">
+    <div class="nav-logo">
+            <img src="images/imagotipoBarriohub.png" alt="BarrioHub Logo" class="imagotipo"/>
+    </div>
+    <div class="nav-links">
+        <ul class="menu">
+            <li><a href="" class="nav-button"> Inicio </a></li>
+            <li><a href="" class="nav-button"> Descubre </a></li>
+            <li class="dropdown nav-button">
+                Impulsa ↓
+                <ul class="submenu">
+                    <li><a href="" class="nav-button">Boxes privados</a></li>
+                    <li><a href="" class="nav-button">Salas de formación</a></li>
+                    <li><a href="" class="nav-button">Salas de reuniones</a></li>
+                    <li><a href="" class="nav-button">Sala de Podcast</a></li>
+                    <li><a href="" class="nav-button">Espacio para eventos</a></li>
+                    <li><a href="" class="nav-button">Galeria de imágenes</a></li>
+                </ul>
+            </li>
+            <li class="dropdown nav-button">
+                Crece ↓
+                <ul class="submenu">
+                    <li><a href="" class="nav-button">Servicios</a></li>
+                    <li><a href="" class="nav-button">Membresía</a></li>
+                    <li><a href="" class="nav-button">Contacto</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
