@@ -1,14 +1,27 @@
-/* Social css (encima del nav)*/
-.top-nav {
-    display: grid;
-    align-items: center;
-    flex-direction: row;
-    border: 1px solid black;
-    background-color: var(--azul-oscuro);
-}
-/* Ocultar el submenú */
+
 * {
     margin:  0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    margin-top: 20px;
 }
 
 .submenu {
@@ -42,19 +55,14 @@ a {
     font-weight: bold;
 }
 
-/* Estilos básicos para el nav */
-.nav {
-    display: grid;
-    align-items: center;
-    flex-direction: row;
-    height: 100px;
-    border: 1px solid black;
-}
+
+
 .nav-logo {
+    display: flex;
     align-items: center;
-    grid-column: span 2 / span 2;
-    height: 100px;
+    height: 70px;
 }
+
 .imagotipo {
     align-items: center;
     height: 100px;
@@ -64,13 +72,10 @@ a {
 }
 .nav-links {
     display: flex;
-    gap: 20px;
     justify-content: flex-end;
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
+    align-items: center;
 }
 .nav-button {
-    margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 25px;
     text-decoration: none;
@@ -79,8 +84,6 @@ a {
     font-size: large;
 }
 
-/* Css del submenú*/
-/* Ocultar el submenú */
 .submenu {
     display: none;
     position: absolute;
@@ -89,13 +92,13 @@ a {
     padding: 0;
 }
 
-/* Mostrar submenú al hacer hover */
+
 .dropdown:hover .submenu {
     display: block;
 }
 
-/* Estilos básicos para el menú principal */
 .menu {
+    display: flex;
     list-style: none;
     margin: 0;
 }
