@@ -1,7 +1,7 @@
 .impulsa {
   width: 100%;
   min-height: 100vh;
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
   padding: 80px 40px;
   display: flex;
   align-items: center;
@@ -10,83 +10,110 @@
 }
 
 .impulsa-container {
+  max-width: 1300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-.impulsa-intro, .impulsa-descripcion{
-  max-width: 1000px;
+  gap: 50px;
 }
 
 .impulsa-intro {
-  font-size: 2rem;
-  text-align: start;
-  margin-bottom: 50px;
+  font-size: 1.2rem;
+  text-align: center;
   line-height: 1.8;
-  opacity: 0.95;
+  color: #333;
 }
 
 .impulsa-bg-foto {
-  width: 100%;
+  width: 1300px;
   display: flex;
   flex-direction: column;
+  gap: 30px;
   background-image:
-  linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+  linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
   url('images/impulsa/imagenFondoImpulsa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  border-radius: 12px;
+  padding-bottom: 30px;
+  min-height: 300px;
 }
+
 .impulsa-bg-foto h1 {
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .impulsa-isotipo {
-  width: 350px;
+  width: 280px;
   height: auto;
 }
+
 .impulsa-descripcion {
-  text-align: start;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin: 40px 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
 }
-.impulsa-descripcion li {
+
+.impulsa-descripcion p {
+  margin: 0 0 20px 0;
+}
+
+.impulsa-descripcion ul {
+  margin: 15px 0;
+  padding-left: 0;
   list-style: none;
 }
 
+.impulsa-descripcion li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.impulsa-descripcion li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--naranja);
+  font-weight: bold;
+}
+
 .impulsa-spaces {
-  max-width: 1200px;
-  display: block;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
 }
 
 .impulsa-space {
-  margin: 10px;
-  background: rgba(90, 89, 89, 0.15);
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s, background 0.3s;
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.impulsa-space:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(20, 68, 132, 0.15);
 }
 
 .impulsa-space-description{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-}
-
-.impulsa-space:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.25);
+  gap: 40px;
+  align-items: flex-start;
 }
 
 .impulsa-space-description.reverse {
@@ -94,65 +121,115 @@
 }
 
 .impulsa-space-description h4 {
-  font-size: 2rem;
-  text-decoration: underline;
+  font-size: 1.5rem;
   color: var(--azul-oscuro);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  font-weight: 600;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .impulsa-space-description p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.9;
+  color: #555;
+  margin: 0 0 12px 0;
 }
 
 .impulsa-precios {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  margin-top: auto;
 }
 
 .impulsa-precios span {
-  margin: 5px;
-  border-radius: 20px;
-  border: 1px solid var(--naranja);
-  background-color: var(--naranja);
-  padding: 8px;
+  font-size: 0.98rem;
+  color: #333;
+  font-weight: 500;
+  padding: 12px 16px;
+  background-color: rgba(247, 148, 28, 0.15);
+  border-radius: 8px;
+  border-left: 4px solid var(--naranja);
+  line-height: 1.5;
+  display: inline-block;
+  width: fit-content;
 }
 
 .impulsa-opcion-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  flex: 1;
+}
+
+.impulsa-opcion-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
 }
 
 .impulsa-opcion-text li {
-  font-size: 1.1rem;
-  margin: 2px;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+  color: #555;
 }
 
-.impulsa-opcion-text p, .impulsa-opcion-text li{
-  text-align: left;
+.impulsa-opcion-text li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--naranja);
+  font-weight: bold;
 }
 
+.impulsa-opcion-image-container {
+  width: 350px;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
 .impulsa-image {
-  width: auto;
-  height: 250px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 @media (max-width: 1024px) {
   .impulsa {
-    min-height: auto;
     padding: 60px 30px;
   }
   
-  .impulsa-main-title {
-    font-size: 2.3rem;
+  .impulsa-bg-foto {
+    padding: 40px 30px;
+    min-height: 350px;
+    width: 1300px;
+  }
+  
+  .impulsa-bg-foto h1 {
+    font-size: 2rem;
+  }
+  
+  .impulsa-isotipo {
+    width: 240px;
+  }
+  
+  .impulsa-space-description {
+    gap: 30px;
+  }
+  
+  .impulsa-opcion-image-container {
+    width: 300px;
+    height: 250px;
   }
   
   .impulsa-intro {
@@ -163,42 +240,41 @@
 @media (max-width: 768px) {
   .impulsa {
     padding: 40px 20px;
+    min-height: auto;
   }
   
-  .impulsa-main-title {
-    font-size: 1.8rem;
+  .impulsa-bg-foto {
+    padding: 30px 20px;
+    min-height: 300px;
+  }
+  
+  .impulsa-bg-foto h1 {
+    font-size: 1.6rem;
+  }
+  
+  .impulsa-isotipo {
+    width: 200px;
   }
   
   .impulsa-intro {
     font-size: 1rem;
   }
   
-  .impulsa-spaces {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-  }
-  
   .impulsa-space {
-    padding: 15px;
+    padding: 25px;
   }
   
-  .impulsa-space h4 {
-    font-size: 1rem;
-  }
-  
-  .impulsa-space p {
-    font-size: 0.85rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .impulsa-space, .impulsa-space.reverse {
-    display: flex;
-    flex-direction: column;
+  .impulsa-space-description {
+    flex-direction: column !important;
     gap: 20px;
   }
-  .impulsa-image {
+  
+  .impulsa-space-description h4 {
+    font-size: 1.3rem;
+  }
+  
+  .impulsa-opcion-image-container {
     width: 100%;
-    height: auto;
+    height: 200px;
   }
 }
