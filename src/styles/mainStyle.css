@@ -1,9 +1,28 @@
+html {
+  min-width: 320px;
+}
+
 main {
   width: 100%;
 }
 
 main > section {
   width: 100%;
+}
+
+.naranja {
+  color: var(--naranja);
+  font-weight: bold;
+}
+
+.azul-oscuro {
+  color: var(--azul-oscuro);
+  font-weight: bold;
+}
+
+.azul-claro {
+  color: var(--azul-claro);
+  font-weight: bold;
 }
 
 /* Responsive global */

@@ -1,109 +1,190 @@
 /* Social css (encima del nav)*/
 .top-nav {
-    display: grid;
-    align-items: center;
-    flex-direction: row;
-    border: 1px solid black;
-    background-color: var(--azul-oscuro);
+  display: grid;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid black;
+  background-color: var(--azul-oscuro);
 }
 /* Ocultar el submenú */
 * {
-    margin:  0;
+  margin: 0;
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    list-style: none;
-    padding: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  list-style: none;
+  padding: 0;
 }
 .icon {
-    width: auto;
-    height: 30px;
-    margin: 0 10px;
+  width: auto;
+  height: 30px;
+  margin: 0 10px;
 }
 .icons {
-    display: flex;
-    align-items: center;
-    grid-column: span 2 / span 2;
+  display: flex;
+  margin-left: 50%;
+  align-items: center;
+  grid-column: span 2 / span 2;
 }
 .div-contacto {
-    display: flex;
-    align-items: center;
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
-    justify-content: flex-end;
-    margin-right: 25px;
+  display: flex;
+  align-items: center;
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  justify-content: flex-end;
+  margin-right: 50%;
 }
 a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Desplegar menu hamburguesa */
+:has(#menu[aria-expanded="true"]) .nav-links {
+  display: unset;
 }
 
 /* Estilos básicos para el nav */
 .nav {
-    display: grid;
-    align-items: center;
-    flex-direction: row;
-    height: 100px;
-    border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
 }
 .nav-logo {
-    align-items: center;
-    grid-column: span 2 / span 2;
-    height: 100px;
+  align-items: center;
+  margin-left: 15%;
+  grid-column: span 2 / span 2;
+  height: 100px;
 }
 .imagotipo {
-    align-items: center;
-    height: 100px;
+  align-items: center;
+  height: 100px;
 }
 .nav-logo a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .nav-links {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-    grid-column: span 2 / span 2;
-    grid-column-start: 4;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  grid-column: span 2 / span 2;
+  grid-column-start: 4;
+  margin-right: 10%;
 }
 .nav-button {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 25px;
-    text-decoration: none;
-    color: var(--azul-oscuro);
-    font-weight: bold;
-    font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 25px;
+  text-decoration: none;
+  color: var(--azul-oscuro);
+  font-weight: bold;
+  font-size: large;
 }
 
 /* Css del submenú*/
 /* Ocultar el submenú */
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    list-style: none;
-    padding: 0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  list-style: none;
+  padding: 0;
 }
 
 /* Mostrar submenú al hacer hover */
 .dropdown:hover .submenu {
-    display: block;
+  display: block;
 }
 
 /* Estilos básicos para el menú principal */
 .menu {
-    list-style: none;
-    margin: 0;
+  list-style: none;
+  margin: 0;
 }
 .menu li {
-    display: inline-block;
-    padding: 10px;
-    position: relative;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
 }
 .menu a:hover {
-    opacity: 0.6;
+  opacity: 0.6;
+}
+
+.menu-toggle {
+  display: none;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-links {
+    margin-right: 0;
+  }
+  .nav-logo {
+    margin-left: 0;
+  }
+}
+
+/* Menú móvil lateral desde la derecha */
+@media screen and (max-width: 720px) {
+  /* Menú lateral oculto por defecto */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* fuera de pantalla */
+    width: 250px;
+    background-color: var(--azul-oscuro);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 20px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* Mostrar menú cuando tenga la clase active */
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links ul.menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .submenu {
+    position: static; /* submenú dentro del lateral */
+    background-color: transparent;
+    padding-left: 20px;
+  }
+
+  .dropdown:hover .submenu {
+    display: block;
+  }
+
+  .nav-button {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }

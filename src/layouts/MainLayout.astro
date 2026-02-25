@@ -1,5 +1,6 @@
 ---
 import Nav from "../components/Navbar.astro";
+import Menu from "../components/Menu.astro";
 import "../styles/colores.css";
 import "../styles/mainStyle.css";
 import "../styles/introduccionStyle.css";
@@ -25,5 +26,8 @@ import "../styles/contactoStyle.css";
         <main>
             <slot />
         </main>
+        <script>
+			import "../scripts/menu.js";
+		</script>
     </body>
 </html>
