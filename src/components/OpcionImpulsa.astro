@@ -1,0 +1,17 @@
+---
+import { obtenerClase } from '../scripts/utils.js';
+const{titulo, descripcion, imagen, descripcionImg, postNum} = Astro.props
+const clase = obtenerClase(postNum);
+---
+
+<div class={`impulsa-space ${clase}`}>
+    <div class={`impulsa-opcion-text ${clase}`}>
+        <h4>{titulo}</h4>
+        <p>
+            {descripcion}
+        </p>
+    </div>
+    <div class="impulsa-opcion-image-container">
+        <img src={imagen} alt={descripcionImg} class="impulsa-image" />
+    </div>
+</div>

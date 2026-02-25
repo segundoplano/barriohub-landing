@@ -46,6 +46,16 @@
   transition: transform 0.3s, background 0.3s;
 }
 
+.impulsa-space{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.impulsa-space.reverse {
+  flex-direction: row-reverse;
+}
+
 .impulsa-space:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.25);
@@ -61,6 +71,30 @@
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.9;
+}
+
+.impulsa-opcion-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.impulsa-opcion-text.reverse {
+  align-items: flex-start;
+}
+
+.impulsa-opcion-text p {
+  text-align: right;
+}
+
+.impulsa-opcion-text.reverse p{
+  text-align: left;
+}
+
+.impulsa-image {
+  width: auto;
+  height: 250px;
+  border-radius: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -106,5 +140,13 @@
   
   .impulsa-space p {
     font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .impulsa-space {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
 }

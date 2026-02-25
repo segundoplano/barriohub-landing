@@ -1,0 +1,29 @@
+---
+import Nav from "../components/Navbar.astro";
+import "../styles/colores.css";
+import "../styles/mainStyle.css";
+import "../styles/introduccionStyle.css";
+import "../styles/heroStyle.css";
+import "../styles/descubreStyle.css";
+import "../styles/impulsaStyle.css";
+import "../styles/creceStyle.css";
+import "../styles/formularioStyle.css";
+import "../styles/contactoStyle.css";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Barrio Hub - Tu espacio en Chamartín</title>
+    </head>
+    <body>
+        <Nav />
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
