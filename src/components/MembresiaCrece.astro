@@ -1,0 +1,85 @@
+---
+interface Props {
+  membresia?: string;
+}
+const { membresia } = Astro.props;
+const puntos = [
+  {
+    titulo: "Perfil en Directorio Web del Hub.",
+    items: [],
+    cambiable: false,
+  },
+  {
+    titulo: "Landing Page Premium.",
+    items: [
+      "Diseño profesional",
+      "Optimizada SEO local",
+      "Formulario de contacto",
+      "Hosting incluido primer año",
+    ],
+    cambiable: true,
+  },
+  {
+    titulo: "Ficha Google My Business Optimizada",
+    items: [
+      "Configuración completa y optimizada",
+      "Publicaciones mensuales",
+      "Gestión de reseñas",
+    ],
+    cambiable: true,
+  },
+  {
+    titulo: "Post mensual en RRSS del Hub.",
+    items: [],
+    cambiable: true,
+  },
+  {
+    titulo: "Sesión de fotos / videos semestral.",
+    items: [],
+    cambiable: true,
+  },
+  {
+    titulo: "Newsletter Semanal del Barrio.",
+    items: [
+      "Tips locales",
+      "Ofertas exclusivas entre asociados",
+      "Base de datos de +5.000 vecinos",
+    ],
+    cambiable: false,
+  },
+  {
+    titulo: "Eventos mensuales de Networking.",
+    items: [],
+    cambiable: false,
+  },
+  {
+    titulo: "Descuentos Cruzados entre Asociados.",
+    items: [],
+    cambiable: true,
+  },
+];
+---
+
+<div class="crece-membresia">
+  <div class="crece-membresia-texto">
+    <h4>membresia <br /> {membresia}</h4>
+    {
+      puntos.map((grupo) => (
+        <div class="crece-membresia-lista">
+          <h4
+            class={`${membresia} ${grupo.cambiable ? "cambiable" : ""} crece-membresia-titulo`}
+          >
+            {grupo.titulo}
+          </h4>
+          {grupo.items.length > 0 && (
+            <ul class={`${membresia} ${grupo.cambiable ? "cambiable" : ""}`}>
+              {grupo.items.map((item) => (
+                <li class="crece-membresia-punto">{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

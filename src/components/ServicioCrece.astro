@@ -1,0 +1,28 @@
+---
+interface Props {
+  titulo?: string;
+  descripcion?: string;
+  imagen?: string;
+  descripcionImg?: string;
+  puntos?: string[];
+  precios?: string[];
+  postNum?: string | number;
+}
+const { titulo, imagen, descripcionImg, puntos = [] } = Astro.props;
+---
+
+<div class="crece-servicio">
+  <img src={imagen} alt={descripcionImg} class="crece-servicio-imagen" />
+  <div class="crece-servicio-texto">
+    <h4>{titulo}</h4>
+    {
+      puntos.length > 0 && (
+        <ul>
+          {puntos.map((punto) => (
+            <li class="crece-servicio-punto" set:html={punto} />
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</div>

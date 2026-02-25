@@ -11,7 +11,7 @@
 }
 
 .crece-container {
-  max-width: 100px;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -71,16 +71,95 @@
   font-size: 1.2rem;
 }
 
+/* Css de los servicios y su contenido */
+
+.crece-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+} 
+
+.crece-servicio{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 15px;
+  width: 450px;
+  height: 350px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.crece-servicio-texto {
+  text-align: start;
+}
+
+.crece-servicio-punto::before {
+  content: "✓ ";
+  font-weight: bold;
+}
+
+.crece-servicio-imagen {
+  align-self: center;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.crece-servicio-punto {
+  list-style: none;
+}
+
+/* Css de las membresías */
+
+.crece-membresia {
+  border: 1px solid black;
+}
+
+h4.basica.cambiable::before{
+  content: "X ";
+}
+h4.basica.cambiable, .basica.cambiable {
+  color: black;
+}
+h4.basica::before, h4.premium::before {
+  content: "✓ ";
+}
+
+.crece-membresia-texto {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 15px;
+}
+
+.crece-membresia-texto h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.crece-membresia-lista h4 {
+  font-size: larger;
+}
+
+.crece-membresias-texto h4{
+  text-transform: uppercase;
+}
+
 @media (max-width: 1024px) {
   .crece {
     min-height: auto;
     padding: 60px 30px;
   }
-  
+
   .crece-main-title {
     font-size: 2.3rem;
   }
-  
+
   .crece-intro {
     font-size: 1.1rem;
   }
@@ -90,28 +169,28 @@
   .crece {
     padding: 40px 20px;
   }
-  
+
   .crece-main-title {
     font-size: 1.8rem;
   }
-  
+
   .crece-intro {
     font-size: 1rem;
   }
-  
+
   .crece-offerings {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
+
   .crece-offering {
     padding: 20px;
   }
-  
+
   .crece-offering h4 {
     font-size: 1.2rem;
   }
-  
+
   .crece-offering li {
     font-size: 0.95rem;
   }
