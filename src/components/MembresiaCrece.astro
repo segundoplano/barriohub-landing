@@ -3,6 +3,26 @@ interface Props {
   membresia?: string;
 }
 const { membresia } = Astro.props;
+
+const config = {
+  basica: {
+    titulo: "Plan  básico",
+    descripcion: "Para emprendedores",
+    precio: "25",
+    moneda: "€",
+    isPopular: false,
+  },
+  premium: {
+    titulo: "Plan Premium",
+    descripcion: "Para profesionales y comercios",
+    precio: "200",
+    moneda: "€",
+    isPopular: true,
+  },
+};
+
+const datos = config[membresia] || config.basica;
+
 const puntos = [
   {
     titulo: "Perfil en Directorio Web del Hub.",
@@ -17,7 +37,7 @@ const puntos = [
       "Formulario de contacto",
       "Hosting incluido primer año",
     ],
-    cambiable: true,
+    cambiable: membresia === "basica",
   },
   {
     titulo: "Ficha Google My Business Optimizada",
@@ -26,17 +46,17 @@ const puntos = [
       "Publicaciones mensuales",
       "Gestión de reseñas",
     ],
-    cambiable: true,
+    cambiable: membresia === "basica",
   },
   {
     titulo: "Post mensual en RRSS del Hub.",
     items: [],
-    cambiable: true,
+    cambiable: membresia === "basica",
   },
   {
     titulo: "Sesión de fotos / videos semestral.",
     items: [],
-    cambiable: true,
+    cambiable: membresia === "basica",
   },
   {
     titulo: "Newsletter Semanal del Barrio.",
@@ -55,26 +75,48 @@ const puntos = [
   {
     titulo: "Descuentos Cruzados entre Asociados.",
     items: [],
-    cambiable: true,
+    cambiable: membresia === "basica",
   },
 ];
+
+const puntosOrdenados = [...puntos].sort((a, b) => {
+  if (a.cambiable === b.cambiable) return 0;
+  return a.cambiable ? 1 : -1;
+});
 ---
 
 <div class="crece-membresia">
-  <div class="crece-membresia-texto">
-    <h4>membresia <br /> {membresia}</h4>
+  <div class="crece-membresia-header">
+    <div class="crece-membresia-titulo-section">
+      <h3 class="crece-membresia-titulo">{datos.titulo}</h3>
+      {datos.isPopular && <span class="crece-membresia-badge">MÁS POPULAR</span>}
+    </div>
+    <p class="crece-membresia-descripcion">{datos.descripcion}</p>
+  </div>
+
+  <div class="crece-membresia-precio-section">
+    <div class="crece-membresia-precio-wrapper">
+      <div class="crece-precio-main">
+        <span class="crece-precio-numero">{datos.precio}</span>
+        <span class="crece-precio-symbol">{datos.moneda}</span>
+      </div>
+    </div>
+    <p class="crece-precio-periodo">Al mes con compromiso de permanencia de un año</p>
+  </div>
+
+  <div class="crece-membresia-contenido">
     {
-      puntos.map((grupo) => (
-        <div class="crece-membresia-lista">
+      puntosOrdenados.map((grupo) => (
+        <div class="crece-membresia-seccion">
           <h4
-            class={`${membresia} ${grupo.cambiable ? "cambiable" : ""} crece-membresia-titulo`}
+            class={`crece-membresia-seccion-titulo ${grupo.cambiable ? "excluido" : ""}`}
           >
             {grupo.titulo}
           </h4>
           {grupo.items.length > 0 && (
-            <ul class={`${membresia} ${grupo.cambiable ? "cambiable" : ""}`}>
+            <ul class={`crece-membresia-items ${grupo.cambiable ? "excluido" : ""}`}>
               {grupo.items.map((item) => (
-                <li class="crece-membresia-punto">{item}</li>
+                <li class="crece-membresia-item">{item}</li>
               ))}
             </ul>
           )}
@@ -82,4 +124,6 @@ const puntos = [
       ))
     }
   </div>
+
+  <button class="crece-membresia-boton">Elegir plan</button>
 </div>
