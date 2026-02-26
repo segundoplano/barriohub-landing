@@ -1,85 +1,227 @@
 .contacto {
   width: 100%;
-  min-height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-claro) 100%);
   color: white;
-  padding: 80px 40px;
+  padding: 60px 40px;
   box-sizing: border-box;
 }
 
 .contacto-container {
-  text-align: center;
-  max-width: 700px;
-  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
 }
 
-.contacto-title {
-  font-size: 2.8rem;
+.contacto-content {
+  display: flex;
+  gap: 100px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.contacto-description {
+  flex: 1;
+  min-width: 250px;
+}
+
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  width: 400px;
+}
+
+.description-text .destacado {
+  color: var(--naranja);
+}
+
+.contacto-enlaces {
+  flex: 0.4;
+  text-align: center;
+  margin-right: 70px;
+}
+
+.contacto-section-title {
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 50px;
   letter-spacing: 2px;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.enlaces-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enlaces-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.enlaces-list a:hover {
+  color: var(--naranja);
+}
+
+.contacto-info-section {
+  flex: 0.5;
+  text-align: right;
+}
+
+.contacto-info-section .contacto-section-title {
+  text-align: right;
 }
 
 .contacto-info {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  gap: 8px;
+  align-items: flex-end;
+  margin: 0;
 }
 
 .contacto-address,
 .contacto-email,
 .contacto-phone {
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.95;
 }
 
 .contacto-email {
-  font-size: 1.3rem;
+  color: var(--naranja);
   font-weight: 500;
+}
+
+.contacto-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
   color: var(--naranja);
 }
 
-.contacto-phone {
-  font-size: 1.2rem;
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 1200px) {
+  .contacto-content {
+    gap: 60px;
+  }
+
+  .description-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 1024px) {
-  .contacto {
-    min-height: 55vh;
+  .contacto-container {
+    flex-direction: column;
+    gap: 40px;
   }
-  
-  .contacto-title {
-    font-size: 2.3rem;
+
+  .contacto-content {
+    gap: 50px;
+    width: 100%;
+  }
+
+  .contacto-enlaces {
+    text-align: left;
+  }
+
+  .contacto-info-section {
+    text-align: left;
+  }
+
+  .contacto-info-section .contacto-section-title {
+    text-align: left;
+  }
+
+  .contacto-info {
+    align-items: flex-start;
+  }
+
+  .contacto-social {
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 768px) {
   .contacto {
-    padding: 60px 20px;
-    min-height: auto;
+    padding: 40px 20px;
   }
-  
-  .contacto-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
+
+  .contacto-container {
+    gap: 30px;
   }
-  
+
+  .contacto-content {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .contacto-enlaces,
+  .contacto-info-section {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contacto-info {
+    align-items: flex-start;
+  }
+
+  .contacto-info-section .contacto-section-title {
+    text-align: left;
+  }
+
+  .contacto-section-title {
+    font-size: 0.9rem;
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+  }
+
   .contacto-address,
   .contacto-email,
   .contacto-phone {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
-  
-  .contacto-email {
-    font-size: 1.1rem;
+
+  .contacto-social {
+    gap: 15px;
   }
-  
-  .contacto-info {
-    gap: 20px;
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
   }
 }
