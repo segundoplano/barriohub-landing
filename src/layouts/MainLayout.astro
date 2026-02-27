@@ -1,7 +1,7 @@
 ---
 import Nav from "../components/Navbar.astro";
-import Menu from "../components/Menu.astro";
-import "../scripts/menu.js";
+import "/public/scripts/menu.js";
+import "/public/scripts/carrusel.js";
 ---
 
 <html lang="es">
@@ -17,6 +17,7 @@ import "../scripts/menu.js";
       @import "../styles/creceStyle.css";
       @import "../styles/formularioStyle.css";
       @import "../styles/contactoStyle.css";
+      @import "../styles/carrusel.css";
     </style>
     <meta charset="utf-8" />
     <link
@@ -34,6 +35,7 @@ import "../scripts/menu.js";
     <main>
       <slot />
     </main>
-    <script type="module" src="../scripts/menu.js"></script>
+    <script type="module" src="/public/scripts/menu.js"></script>
+    <script type="module" src="/public/scripts/carrusel.js"></script>
   </body>
 </html>
