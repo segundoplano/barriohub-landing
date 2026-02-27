@@ -21,7 +21,7 @@ const config = {
   },
 };
 
-const datos = config[membresia] || config.basica;
+const datos = config[(membresia as keyof typeof config) || 'basica'] || config.basica;
 
 const puntos = [
   {

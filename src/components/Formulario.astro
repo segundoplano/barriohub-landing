@@ -1,48 +1,110 @@
 <section class="formulario-container">
   <div class="formulario-wrapper">
-    <h2 class="formulario-title">Asesórate sobre Barrio Hub</h2>
-    <p class="formulario-subtitle">
-      Si quieres que te asesoremos sobre Barrio Hub y nuestros servicios, contacta con nosotros. 
-      Te responderemos en breve.
-    </p>
-    
-    <form class="formulario-form">
-      <div class="form-group">
-        <input 
-          type="text" 
-          placeholder="Tu nombre" 
-          class="form-input" 
-          required 
-        />
+    <div class="formulario-content">
+      
+      <div class="formulario-contact">
+        <div class="contact-info">
+          <a href="mailto:hola@barriohub.es" class="contact-email">HOLA@BARRIOHUB.ES</a>
+          
+          <div class="contact-location">
+            <h3>Estamos en:</h3>
+            <p>Calle Matilde Diez, 11, Local A.</p>
+          </div>
+        </div>
+        
+        <div class="contact-map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.318187671288!2d-3.6781694043832402!3d40.44609399778239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228da920c632b%3A0xcd02bd5c1eef0c7f!2sC.%20de%20Matilde%20D%C3%ADez%2C%2011%2C%20Chamart%C3%ADn%2C%2028002%20Madrid!5e0!3m2!1sen!2ses!4v1772213535164!5m2!1sen!2ses" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
       
-      <div class="form-group">
-        <input 
-          type="email" 
-          placeholder="Tu correo" 
-          class="form-input" 
-          required 
-        />
+     
+      <div class="formulario-form-section">
+        <div class="formulario-text">
+          <p>
+            Si quieres que te asesoremos sobre <strong>Barrio Hub</strong>, contacta con nosotros.
+          </p>
+          <p>
+            Te informamos sobre nuestras membresías, espacios de trabajo y servicios
+            disponibles.
+          </p>
+          <p>
+            Estamos a tu disposición para resolver cualquier duda y ayudarte a encontrar la
+            mejor opción que se adapte a ti y a tu proyecto.
+          </p>
+          <p>
+            Puedes escribirnos por email, a través del formulario o directamente por
+            <strong>WhatsApp</strong>. ¡Te esperamos en Barrio Hub! ❤️
+          </p>
+        </div>
+        
+        <form class="formulario-form">
+          <div class="form-group">
+            <label for="nombre">Nombre: <span class="required">*</span></label>
+            <input 
+              id="nombre"
+              type="text" 
+              placeholder="" 
+              class="form-input" 
+              required 
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Correo electrónico: <span class="required">*</span></label>
+            <input 
+              id="email"
+              type="email" 
+              placeholder="" 
+              class="form-input" 
+              required 
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="telefono">Teléfono: <span class="required">*</span></label>
+            <input 
+              id="telefono"
+              type="tel" 
+              placeholder="" 
+              class="form-input" 
+              required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="conocimiento">¿Cómo nos has conocido?</label>
+            <select id="conocimiento" class="form-select">
+              <option value="">Selecciona una opción</option>
+              <option value="conocidos">Por conocidos</option>
+              <option value="redes">Por redes sociales</option>
+              <option value="google">Por Google</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          
+          <div class="form-checkbox">
+            <input 
+              id="terminos"
+              type="checkbox" 
+              class="checkbox-input" 
+              required
+            />
+            <label for="terminos" class="checkbox-label">
+              Acepta los <strong>términos de condiciones</strong>
+            </label>
+          </div>
+          
+          <button type="submit" class="form-button">Enviar</button>
+        </form>
       </div>
-      
-      <div class="form-group">
-        <input 
-          type="tel" 
-          placeholder="Tu teléfono (opcional)" 
-          class="form-input" 
-        />
-      </div>
-      
-      <div class="form-group">
-        <textarea 
-          placeholder="Tu mensaje" 
-          class="form-textarea" 
-          rows="5" 
-          required
-        ></textarea>
-      </div>
-      
-      <button type="submit" class="form-button">Enviar Solicitud</button>
-    </form>
+    </div>
   </div>
 </section>

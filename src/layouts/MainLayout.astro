@@ -1,24 +1,20 @@
 ---
 import Nav from "../components/Navbar.astro";
-import "/public/scripts/menu.js";
-import "/public/scripts/carrusel.js";
+import "../scripts/menu.js";
+import "../styles/navbarStyle.css";
+import "../styles/colores.css";
+import "../styles/mainStyle.css";
+import "../styles/introduccionStyle.css";
+import "../styles/heroStyle.css";
+import "../styles/descubreStyle.css";
+import "../styles/impulsaStyle.css";
+import "../styles/creceStyle.css";
+import "../styles/formularioStyle.css";
+import "../styles/contactoStyle.css";
 ---
 
 <html lang="es">
   <head>
-    <style is:global>
-      @import "../styles/navbarStyle.css";
-      @import "../styles/colores.css";
-      @import "../styles/mainStyle.css";
-      @import "../styles/introduccionStyle.css";
-      @import "../styles/heroStyle.css";
-      @import "../styles/descubreStyle.css";
-      @import "../styles/impulsaStyle.css";
-      @import "../styles/creceStyle.css";
-      @import "../styles/formularioStyle.css";
-      @import "../styles/contactoStyle.css";
-      @import "../styles/carrusel.css";
-    </style>
     <meta charset="utf-8" />
     <link
       rel="icon"
@@ -35,7 +31,9 @@ import "/public/scripts/carrusel.js";
     <main>
       <slot />
     </main>
-    <script type="module" src="/public/scripts/menu.js"></script>
-    <script type="module" src="/public/scripts/carrusel.js"></script>
+    <script>
+      import "../scripts/menu.js";
+      import "../scripts/navbar.js";
+    </script>
   </body>
 </html>

@@ -24,27 +24,29 @@ const clase = obtenerClase(postNum);
 <div class={`impulsa-space ${clase}`}>
   <div class={`impulsa-space-description ${clase}`}>
     <div class={`impulsa-opcion-text ${clase}`}>
-      <h4>{titulo}</h4>
-      <p set:html={descripcion} />
-      {
-        puntos.length > 0 && (
-          <ul>
-            {puntos.map((punto) => (
-              <li set:html={punto} />
-            ))}
-          </ul>
-        )
-      }
+      <div class="impulsa-opcion-content">
+        <h4>{titulo}</h4>
+        <p set:html={descripcion} />
+        {
+          puntos.length > 0 && (
+            <ul>
+              {puntos.map((punto) => (
+                <li set:html={punto} />
+              ))}
+            </ul>
+          )
+        }
+      </div>
+      <div class="impulsa-precios">
+        {
+          precios.length > 0
+            ? precios.map((precio) => <span set:html={precio} />)
+            : null
+        }
+      </div>
     </div>
     <div class="impulsa-opcion-image-container">
       <img src={imagen} alt={descripcionImg} class="impulsa-image" />
     </div>
-  </div>
-  <div class="impulsa-precios">
-    {
-      precios.length > 0
-        ? precios.map((precio) => <span set:html={precio} />)
-        : null
-    }
   </div>
 </div>

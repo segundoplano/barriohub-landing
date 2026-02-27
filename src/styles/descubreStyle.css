@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+
 }
 
 .descubre-container {
@@ -19,7 +20,7 @@
 
 .descubre-intro-text {
   margin-top: -50px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: #333;
 }
@@ -103,7 +104,7 @@
 }
 
 .descubre-final-title {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   color: var(--azul-oscuro);

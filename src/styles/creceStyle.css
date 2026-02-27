@@ -29,7 +29,7 @@
 }
 
 .crece-intro-text {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   line-height: 1.8;
   margin: 0 auto;
   max-width: 1400px;
@@ -45,7 +45,7 @@
 }
 
 .crece-servicios-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
   margin: 0 0 40px 0;
@@ -99,7 +99,7 @@
 }
 
 .crece-servicio-texto h4 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--azul-oscuro);
   margin: 0 0 15px 0;
@@ -139,7 +139,7 @@
 }
 
 .crece-membresia-intro p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0 0 12px 0;
 }
