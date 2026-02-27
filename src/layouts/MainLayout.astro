@@ -1,6 +1,5 @@
 ---
 import Nav from "../components/Navbar.astro";
-import "public/scripts/menu.js";
 import "../styles/navbarStyle.css";
 import "../styles/colores.css";
 import "../styles/mainStyle.css";
@@ -18,7 +17,7 @@ import "../styles/contactoStyle.css";
     <meta charset="utf-8" />
     <link
       rel="icon"
-      type="image/svg+xml"
+      type="/image/svg+xml"
       href="/barriohub-landing/favicon.svg"
     />
     <link rel="icon" href="/barriohub-landing/favicon.ico" />
@@ -31,9 +30,7 @@ import "../styles/contactoStyle.css";
     <main>
       <slot />
     </main>
-    <script>
-      import "/scripts/menu.js";
-      import "/scripts/navbar.js";
-    </script>
+    <script type="module" src="/scripts/menu.js"></script>
+    <script type="module" src="/scripts/navbar.js"></script>
   </body>
 </html>
