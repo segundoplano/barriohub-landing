@@ -55,10 +55,13 @@
 
 .descubre-image-placeholder {
   width: 100%;
-  height: 350px;
+  max-width: 900px;      /* controla el tamaño visual */
+  aspect-ratio: 16/9;    /* mantiene proporción */
   border-radius: 12px;
   overflow: hidden;
   background-color: #e8e8e8;
+  margin: auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
