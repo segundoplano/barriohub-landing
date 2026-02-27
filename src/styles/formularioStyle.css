@@ -180,7 +180,7 @@
 }
 
 .form-button:hover {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(247, 148, 28, 0.3);
 }
@@ -212,7 +212,7 @@
   .formulario-container {
     padding: 30px 20px;
   }
-  
+
   .formulario-wrapper {
     border-radius: 8px;
   }
@@ -235,13 +235,13 @@
   .formulario-text p {
     font-size: 0.9rem;
   }
-  
+
   .form-input,
   .form-select {
     padding: 10px 12px;
     font-size: 0.9rem;
   }
-  
+
   .form-button {
     padding: 11px 20px;
     font-size: 0.9rem;

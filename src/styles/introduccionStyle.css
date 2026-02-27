@@ -5,9 +5,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 0.15) 70%, rgba(255, 255, 255, 0) 100%),
-    url('/barriohub-landing/images/inicio/fotoBannerInicio.jpg');
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.5) 30%,
+      rgba(255, 255, 255, 0.15) 70%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("/barriohub-landing/images/inicio/fotoBannerInicio.jpg");
   background-position: center, center;
   background-size: auto, cover;
   background-repeat: no-repeat;
@@ -32,7 +38,6 @@
   margin-right: 850px;
   margin-left: 100px;
 }
-
 
 .introduccion-label {
   font-size: 0.875rem;
@@ -64,7 +69,7 @@
   .introduccion-title {
     font-size: 3.2rem;
   }
-  
+
   .introduccion-subtitle {
     font-size: 1rem;
   }
@@ -75,21 +80,21 @@
     height: auto;
     min-height: 70vh;
   }
-  
+
   .introduccion-title {
     font-size: 3rem;
   }
-  
+
   .introduccion-subtitle {
     font-size: 1rem;
   }
 }
-  
+
 @media (max-width: 480px) {
   .introduccion-title {
     font-size: 1.8rem;
   }
-  
+
   .introduccion-subtitle {
     font-size: 1rem;
   }

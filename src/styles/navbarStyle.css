@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
 }
@@ -24,7 +23,6 @@
     gap: 60px;
 }
 
-
 a {
   text-decoration: none;
   color: white;
@@ -32,9 +30,9 @@ a {
 }
 
 .nav-logo {
-    display: flex;
-    align-items: center;
-    margin-top: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
 }
 
 .imagotipo {
@@ -48,9 +46,9 @@ a {
   text-decoration: none;
 }
 .nav-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .nav-button {
     margin-bottom: 0;
@@ -77,15 +75,14 @@ a {
   padding: 0;
 }
 
-
 .dropdown:hover .submenu {
   display: block;
 }
 
 .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
 }
 .menu li {
   display: inline-block;

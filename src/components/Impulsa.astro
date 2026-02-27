@@ -48,10 +48,11 @@ import OpcionImpulsa from "../components/OpcionImpulsa.astro";
         </p>
       </div>
 
-      <div class="impulsa-spaces">
-        <OpcionImpulsa
-          titulo="Boxes Privados"
-          descripcion="Disponemos de 8 boxes privados, pensados para que tengas
+    <div class="impulsa-spaces">
+      <OpcionImpulsa
+        client:load
+        titulo="Boxes Privados"
+        descripcion="Disponemos de 8 boxes privados, pensados para que tengas
                         tu propio espacio dentro de la comunidad Barrio Hub. Son
                         ideales para trabajar individualmente, combinando
                         privacidad con la energía de un entorno creativo. "
@@ -152,4 +153,5 @@ import OpcionImpulsa from "../components/OpcionImpulsa.astro";
         />
       </div>
     </div>
-  </article>
+  </div>
+</article>
