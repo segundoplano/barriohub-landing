@@ -7,15 +7,6 @@ import Crece from "../components/Crece.astro";
 import Formulario from "../components/Formulario.astro";
 import Contacto from "../components/Contacto.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import "../styles/colores.css";
-import "../styles/mainStyle.css";
-import "../styles/introduccionStyle.css";
-import "../styles/heroStyle.css";
-import "../styles/descubreStyle.css";
-import "../styles/impulsaStyle.css";
-import "../styles/creceStyle.css";
-import "../styles/formularioStyle.css";
-import "../styles/contactoStyle.css";
 ---
 
 <MainLayout>
@@ -25,13 +16,13 @@ import "../styles/contactoStyle.css";
   <section class="hero">
     <Description />
   </section>
-  <section class="descubre">
+  <section class="descubre" id="descubre">
     <Descubre />
   </section>
-  <section class="impulsa">
+  <section class="impulsa" id="impulsa">
     <Impulsa />
   </section>
-  <article class="crece">
+  <article class="crece" id="crece">
     <Crece />
   </article>
   <section class="formulario">
@@ -41,4 +32,3 @@ import "../styles/contactoStyle.css";
     <Contacto />
   </section>
 </MainLayout>
-

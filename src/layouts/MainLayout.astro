@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Navbar.astro";
-import Menu from "../components/Menu.astro";
+import "../scripts/menu.js";
+import "../styles/navbarStyle.css";
 import "../styles/colores.css";
 import "../styles/mainStyle.css";
 import "../styles/introduccionStyle.css";
@@ -13,22 +14,26 @@ import "../styles/contactoStyle.css";
 ---
 
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/barriohub-landing/favicon.svg" />
-        <link rel="icon" href="/barriohub-landing/favicon.ico" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Barrio Hub - Tu espacio en Chamartín</title>
-    </head>
-    <body>
-        <Nav />
-        <main>
-            <slot />
-        </main>
-        <script>
-			import "../scripts/menu.js";
-			import "../scripts/navbar.js";
-		</script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/barriohub-landing/favicon.svg"
+    />
+    <link rel="icon" href="/barriohub-landing/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Barrio Hub - Tu espacio en Chamartín</title>
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <script>
+      import "../scripts/menu.js";
+      import "../scripts/navbar.js";
+    </script>
+  </body>
 </html>

@@ -52,11 +52,11 @@
     padding: 60px 30px;
     min-height: 70vh;
   }
-  
+
   .hero-title {
     font-size: 1.8rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
@@ -67,19 +67,19 @@
     padding: 40px 20px;
     min-height: auto;
   }
-  
+
   .hero-title {
     font-size: 1.8rem;
   }
-  
+
   .hero-description {
     font-size: 1rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.3rem;
   }
-  
+
   .hero-directory-text {
     font-size: 0.95rem;
   }

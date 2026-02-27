@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
 
 * {
-  font-family: 'Sora', sans-serif;
+  font-family: "Sora", sans-serif;
 }
 
 html {
   min-width: 320px;
 }
 
-html, body {
-  font-family: 'Sora', sans-serif;
+html,
+body {
+  font-family: "Sora", sans-serif;
 }
 
 main {
