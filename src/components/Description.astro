@@ -1,47 +1,67 @@
 ---
-import '../styles/descriptionStyle.css';
+import "../styles/descriptionStyle.css";
 ---
+
 <section class="hero-container">
   <div class="hero-content">
     <h2 class="hero-title">Tu espacio en Chamartín</h2>
     <p class="hero-description">
-      Bienvenido a <span class="hero-emphasis">Barrio</span> <span class="hero-emphasis-orange">Hub</span>, el lugar donde tus ideas, proyectos y creatividad se encuentran. 
-      Aquí no solo tendrás un espacio para trabajar, reunirte o crear, sino una comunidad que comparte 
-      tu energía y tus ganas de crecer.
+      Bienvenido a <span class="hero-emphasis">Barrio</span>
+      <span class="hero-emphasis-orange">Hub</span>, el lugar donde tus ideas,
+      proyectos y creatividad se encuentran. Aquí no solo tendrás un espacio
+      para trabajar, reunirte o crear, sino una comunidad que comparte tu
+      energía y tus ganas de crecer.
     </p>
     <h3 class="hero-subtitle">Directorio de Profesionales</h3>
     <p class="hero-directory-text">
-      Conoce a los expertos que forman parte de Barrio Hub, y aprovecha las sinergias locales.
+      Conoce a los expertos que forman parte de Barrio Hub, y aprovecha las
+      sinergias locales.
     </p>
     
-    <div class="hero-search-container">
-      <div class="hero-search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" placeholder="Buscar por servicio" class="hero-search-input">
+    <div class="hero-search-section">
+      
+      <div class="hero-search-container">
+        <div class="hero-search-box">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder="Buscar por servicio"
+            class="hero-search-input"
+          />
+        </div>
+        <button class="hero-search-btn">Buscar en el Hub</button>
       </div>
-      <button class="hero-search-btn">Buscar en el Hub</button>
+
+      <div class="hero-search-results" id="search-results"></div>
     </div>
+
 
     <div class="hero-cards-grid">
       <div class="hero-card">
         <div class="hero-card-icon">🏥</div>
         <h4 class="hero-card-category">Salud</h4>
         <h5 class="hero-card-title">Clínica Dental Chamartín</h5>
-        <p class="hero-card-description">Especialistas en estética dental y salud bucodental.</p>
+        <p class="hero-card-description">
+          Especialistas en estética dental y salud bucodental.
+        </p>
       </div>
-      
+
       <div class="hero-card">
         <div class="hero-card-icon">⚖️</div>
         <h4 class="hero-card-category">Legal</h4>
         <h5 class="hero-card-title">Bufete Álvarez & Co</h5>
-        <p class="hero-card-description">Asesoría legal integral para empresas y particulares de la zona.</p>
+        <p class="hero-card-description">
+          Asesoría legal integral para empresas y particulares de la zona.
+        </p>
       </div>
-      
+
       <div class="hero-card">
         <div class="hero-card-icon">🎓</div>
         <h4 class="hero-card-category">Academia</h4>
         <h5 class="hero-card-title">Academia Prosperidad</h5>
-        <p class="hero-card-description">Refuerzo escolar y cursos de idiomas para todas las edades.</p>
+        <p class="hero-card-description">
+          Refuerzo escolar y cursos de idiomas para todas las edades.
+        </p>
       </div>
     </div>
   </div>
