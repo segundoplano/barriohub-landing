@@ -16,9 +16,10 @@ let current = 0;
       </div>
     ))}
   </div>
-
-  <div class="carousel-buttons">
-    <button id="prev">‹</button>
-    <button id="next">›</button>
+    
+  <div class="carousel-dots" id="carousel-dots">
+    {images.map((_, i) => (
+      <button class="dot" data-index={i}></button>
+    ))}
   </div>
 </div>

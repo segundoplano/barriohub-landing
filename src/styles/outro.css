@@ -1,0 +1,29 @@
+.outro {
+  width: 100%;
+  max-width: 3000px;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      315deg,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.5) 30%,
+      rgba(255, 255, 255, 0.15) 70%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("/barriohub-landing/images/inicio/fotoFinalInicio.jpg");
+  background-position: center, center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--azul-oscuro);
+  box-sizing: border-box;
+  border: none;
+  border-radius: 30px;
+}
+
+.outro-title{
+  font-size: 4em;
+}

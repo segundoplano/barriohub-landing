@@ -8,6 +8,13 @@ html {
   min-width: 320px;
 }
 
+#titulo,
+#titulo *,
+#titulo span,
+#titulo strong {
+  font-family: 'Inter';
+}
+
 html,
 body {
   font-family: "Sora", sans-serif;

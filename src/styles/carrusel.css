@@ -27,22 +27,27 @@
   object-fit: contain;
 }
 
-.carousel-buttons {
+.carousel-dots {
   position: absolute;
-  top: 50%;
-  width: 100%;
+  bottom: 12px;        /* distancia desde abajo */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none; /* Los botones no bloquean clics */
+  gap: 8px;
+  z-index: 10;
 }
 
-.carousel-buttons button {
-  background: rgba(0, 0, 0, 0.5);
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
   border: none;
-  color: white;
-  padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: 2rem;
-  pointer-events: all; /* Reactivan los botones */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot.active {
+  background-color: #333;
+  transform: scale(1.2);
 }

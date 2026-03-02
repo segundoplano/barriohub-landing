@@ -25,7 +25,7 @@ const clase = obtenerClase(postNum);
   <div class={`impulsa-space-description ${clase}`}>
     <div class={`impulsa-opcion-text ${clase}`}>
       <div class="impulsa-opcion-content">
-        <h4>{titulo}</h4>
+        <h4 id="titulo">{titulo}</h4>
         <p set:html={descripcion} />
         {
           puntos.length > 0 && (

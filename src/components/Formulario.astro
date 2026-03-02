@@ -4,7 +4,7 @@
       
       <div class="formulario-contact">
         <div class="contact-info">
-          <a href="mailto:hola@barriohub.es" class="contact-email">HOLA@BARRIOHUB.ES</a>
+          <a href="mailto:hola&#64;barriohub&#46;es" class="contact-email">HOLA@BARRIOHUB.ES</a>
           
           <div class="contact-location">
             <h3>Estamos en:</h3>
@@ -29,7 +29,7 @@
       <div class="formulario-form-section">
         <div class="formulario-text">
           <p>
-            Si quieres que te asesoremos sobre <strong>Barrio Hub</strong>, contacta con nosotros.
+            Si quieres que te asesoremos sobre <strong>Barrio</strong> <span class="naranja">Hub</span>, contacta con nosotros.
           </p>
           <p>
             Te informamos sobre nuestras membresías, espacios de trabajo y servicios
@@ -41,7 +41,7 @@
           </p>
           <p>
             Puedes escribirnos por email, a través del formulario o directamente por
-            <strong>WhatsApp</strong>. ¡Te esperamos en Barrio Hub! ❤️
+            <strong>WhatsApp</strong>. ¡Te esperamos en Barrio Hub! 🧡​
           </p>
         </div>
         
@@ -78,6 +78,27 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="conocimiento">Asunto</label>
+            <select id="conocimiento" class="form-select">
+              <option value="">Selecciona una opción</option>
+              <option value="espacios">Espacios</option>
+              <option value="servicios">Servicios</option>
+              <option value="membresias">Membresías</option>
+              <option value="mas_informacion">Mas información</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje: <span class="required">*</span></label>
+            <input 
+              id="mensaje"
+              type="text" 
+              placeholder="" 
+              class="form-input" 
+              required
+            />
+          </div>
           
           <div class="form-group">
             <label for="conocimiento">¿Cómo nos has conocido?</label>
@@ -98,7 +119,7 @@
               required
             />
             <label for="terminos" class="checkbox-label">
-              Acepta los <strong>términos de condiciones</strong>
+              Acepta la <strong>política de privacidad</strong> <span class="required">*</span>
             </label>
           </div>
           

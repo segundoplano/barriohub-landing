@@ -6,14 +6,14 @@ const { membresia } = Astro.props;
 
 const config = {
   basica: {
-    titulo: "Plan  básico",
+    titulo: ["Plan", "básico"],
     descripcion: "Para emprendedores",
     precio: "25",
     moneda: "€",
     isPopular: false,
   },
   premium: {
-    titulo: "Plan Premium",
+    titulo: ["Plan", "premium"],
     descripcion: "Para profesionales y comercios",
     precio: "200",
     moneda: "€",
@@ -21,7 +21,8 @@ const config = {
   },
 };
 
-const datos = config[(membresia as keyof typeof config) || 'basica'] || config.basica;
+const datos =
+  config[(membresia as keyof typeof config) || "basica"] || config.basica;
 
 const puntos = [
   {
@@ -85,45 +86,62 @@ const puntosOrdenados = [...puntos].sort((a, b) => {
 });
 ---
 
-<div class="crece-membresia">
-  <div class="crece-membresia-header">
-    <div class="crece-membresia-titulo-section">
-      <h3 class="crece-membresia-titulo">{datos.titulo}</h3>
-      {datos.isPopular && <span class="crece-membresia-badge">MÁS POPULAR</span>}
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <div class="crece-membresia-header">
+        <div class="crece-membresia-titulo-section">
+          <h3 class=`crece-membresia-titulo m1-${membresia}` id="titulo">{datos.titulo[0]}</h3>
+          <h3 class=`crece-membresia-titulo m2-${membresia}` id="titulo">{datos.titulo[1]}</h3>
+        </div>
+        {
+          datos.isPopular && (
+            <span class="crece-membresia-badge">MÁS POPULAR</span>
+          )
+        }
+        <!-- <p class="crece-membresia-descripcion">{datos.descripcion}</p> -->
+      </div>
+      <img
+        src={`/barriohub-landing/images/membresia${membresia?.charAt(0).toUpperCase()}${membresia?.slice(1)}.png`}
+        alt={`Foto de la membresia ${membresia}`}
+        class=`crece-membresia-foto-${membresia}`
+      />
     </div>
-    <p class="crece-membresia-descripcion">{datos.descripcion}</p>
-  </div>
+    <div class="card-back">
+      <div class="crece-membresia-precio-section">
+        <div class="crece-membresia-precio-wrapper">
+          <div class="crece-precio-main">
+            <span class="crece-precio-numero">{datos.precio}</span>
+            <span class="crece-precio-symbol">{datos.moneda}</span>
+          </div>
+        </div>
+        <p class="crece-precio-periodo">
+          Al mes con compromiso de permanencia de un año
+        </p>
+      </div>
 
-  <div class="crece-membresia-precio-section">
-    <div class="crece-membresia-precio-wrapper">
-      <div class="crece-precio-main">
-        <span class="crece-precio-numero">{datos.precio}</span>
-        <span class="crece-precio-symbol">{datos.moneda}</span>
+      <div class="crece-membresia-contenido">
+        {
+          puntosOrdenados.map((grupo) => (
+            <div class="crece-membresia-seccion">
+              <h4
+                class={`crece-membresia-seccion-titulo ${grupo.cambiable ? "excluido" : ""}`}
+              >
+                {grupo.titulo}
+              </h4>
+              {grupo.items.length > 0 && (
+                <ul
+                  class={`crece-membresia-items ${grupo.cambiable ? "excluido" : ""}`}
+                >
+                  {grupo.items.map((item) => (
+                    <li class="crece-membresia-item">{item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))
+        }
       </div>
     </div>
-    <p class="crece-precio-periodo">Al mes con compromiso de permanencia de un año</p>
   </div>
-
-  <div class="crece-membresia-contenido">
-    {
-      puntosOrdenados.map((grupo) => (
-        <div class="crece-membresia-seccion">
-          <h4
-            class={`crece-membresia-seccion-titulo ${grupo.cambiable ? "excluido" : ""}`}
-          >
-            {grupo.titulo}
-          </h4>
-          {grupo.items.length > 0 && (
-            <ul class={`crece-membresia-items ${grupo.cambiable ? "excluido" : ""}`}>
-              {grupo.items.map((item) => (
-                <li class="crece-membresia-item">{item}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))
-    }
-  </div>
-
-  <button class="crece-membresia-boton">Elegir plan</button>
 </div>

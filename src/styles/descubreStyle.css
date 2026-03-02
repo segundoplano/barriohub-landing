@@ -2,12 +2,11 @@
   width: 100%;
   background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
   color: #333;
-  padding: 80px 40px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-
 }
 
 .descubre-container {
@@ -56,8 +55,8 @@
 
 .descubre-image-placeholder {
   width: 100%;
-  max-width: 900px;      /* controla el tamaño visual */
-  aspect-ratio: 16/9;    /* mantiene proporción */  
+  max-width: 900px; /* controla el tamaño visual */
+  aspect-ratio: 16/9; /* mantiene proporción */
   overflow: hidden;
   background-color: #e8e8e8;
   margin: auto;
@@ -89,12 +88,12 @@
 }
 
 .descubre-value-title {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--azul-claro);
   align-self: center;
+  text-decoration: underline;
 }
 
 .descubre-value-text {
